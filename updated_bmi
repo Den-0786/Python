@@ -1,0 +1,21 @@
+#UPDATED BMI
+def bmi_calculator(weight, height, new_bmi):
+    bmi = int(weight) / float(height) ** 2
+    new_bmi = int(round(bmi,1))
+
+    if new_bmi < 18.5:
+        print(f"Your BMI is {new_bmi}, you are underweight\n")
+    elif new_bmi < 25:
+        print(f"Your BMI is {new_bmi}, you have a normal weight\n")
+    elif new_bmi < 30:
+        print(f"Your BMI is {new_bmi}, you are slightly overweight\n")
+    elif new_bmi < 35:
+        print(f"Your BMI is {new_bmi}, you are obese\n")
+    else:
+        print(f"Your BMI is {new_bmi}, you are clinically obese!")
+        
+
+person_weight = input("enter the weight in kg:\n")
+person_height = input("enter the height in m:\n")
+
+bmi_calculator(weight=person_weight, height=person_height,  new_bmi=None)
